@@ -1,0 +1,248 @@
+body, html {
+    margin:0;
+}
+
+:root {
+    --color-1: #148;
+    --color-2: #f8f8ff;
+    --color-3: #0090C0;
+    --color-4: #007BC1;
+    --color-5: #0f3d7a;
+}
+
+html {
+    font-size:16px;
+    font-size: clamp(4vw, 2vh, 5vw);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    color:var(--color-1);
+    background-color:var(--color-2);
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin:0;
+} a {
+    text-decoration: none;
+} img {
+    max-width: 100%;
+}
+
+h4 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+main > h4 {
+    font-weight: 500;
+}
+
+header {
+    width: 100%;
+    height: 9vh;
+    max-height: 5rem;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    border-bottom: 2px solid white;
+    box-shadow: 0 1rem 4rem -1rem white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 9;
+}
+
+#intro {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(0deg, var(--color-3), transparent 38%);
+    z-index: 1;
+} #intro > img {
+    width: 80%;
+    margin: 0 auto;
+} h1 {
+    font-size: 3rem;
+    /* margin: 2rem 0 1rem 0; */
+    font-weight: 500;
+    line-height: 3rem;
+} #intro h2 {
+    font-size: 1.2rem;
+    margin: 0 6vw;
+    font-weight: 500;
+    letter-spacing: 1px;
+} #intro h2 strong {
+    font-weight: 600;
+} #intro article {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+} .telegrambt {
+    margin: 0 auto;
+    height: 3rem;
+    font-size: 1.3rem;
+    background: #ECECF3;
+    font-weight: 400;
+} .telegrambt p {
+    color: #1f95c7;
+}
+
+.defaultBT, summary {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 100rem;
+    height: 3rem;
+} .defaultBT img, summary img {
+    height: 100%;
+}  .arrow {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    transform: rotate(45deg) translateY(-2px) translateX(-2px);
+} .defaultBT p {
+    margin: 0 1.3rem 0 1.1rem;
+    font-weight: 400;
+}
+
+.divisor {
+    width: 24%;
+    border: 1px solid rgb(89 157 199 / 60%);
+    margin: 0.6rem auto;
+}
+
+#know_more {
+    position: absolute;
+    bottom: 4rem;
+    color: var(--color-2);
+    left: 12vw;
+    right: 12vw;
+    padding: 0 1rem;
+    background: rgba(0,70,140,0.6);
+    backdrop-filter: blur(5px);
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    animation: floating 1s ease infinite alternate;
+    justify-content: space-around;
+    border: 3px solid white;
+} #know_more p {
+    font-size: 1.3rem;
+}
+
+@keyframes floating {
+    0% {
+        transform:translateY(-0.4rem);
+    } 100% {
+        transform:translateY(0rem);
+    }
+}
+
+#lang {
+    position: fixed;
+    top: 9vh;
+    left: 0;
+    background: #ECECF3;
+    padding: 0.4rem 0.5rem 0.3rem 0.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 4vw;
+    z-index: 999;
+}
+
+
+
+#proposta {
+    background-color: var(--color-1);
+    text-align: center;
+    color: var(--color-2);
+    margin-bottom: 7rem;
+    padding-top: 9vh;
+    margin-top: -9vh;
+} .highlight_txt {
+    padding: 3rem 2rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+} #proposta details {
+    text-align: center;
+    margin: 0.2rem auto 0rem auto;
+    color: white;
+    font-size: 1.2rem;
+    width: 90%;
+    box-sizing: border-box;
+} #proposta a p {
+    font-size: 5vw;
+}
+
+details:focus {
+    outline:none;
+    background: #4D91BB;
+}
+
+#proposta summary {
+    font-size: 1.3rem;
+    background-color: var(--color-4);
+    z-index: 1;
+    transition:background-color 0.3s ease;
+} #proposta summary::marker {
+    font-size: 0;
+} #proposta summary.defaultBT:focus {
+    outline:none;
+    background: #1595C8;
+} #proposta .description {
+    text-align: left;
+    background: linear-gradient(var(--color-5) 50%, transparent);
+    width: 100%;
+    margin: -1rem 0 0 0;
+    padding: 2rem;
+    box-sizing: border-box;
+} #proposta details a {
+    display: block;
+    color: var(--color-1);
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    background: white;
+    border-radius: 10rem;
+    text-align: center;
+    margin-top: 1rem;
+} #proposta .last_details .description {
+    padding: 2rem 2rem 0 2rem;
+    border-radius: 0 0 2rem 2rem;
+}
+
+#features01 {
+    margin: 3rem 0 8rem 0;
+    padding: 2rem 2rem 0 2rem;
+    display: flex;
+    flex-flow: column;
+    background: linear-gradient(90deg, var(--color-4), transparent);
+    font-size: 1.8rem;
+}
+
+
+#graph_iframe {
+    width: 90%;
+    height: 62vh;
+    margin: 2rem auto;
+    display: block;
+    border-radius: 1rem;
+}
+
+
+.img_break {
+    transform: translateY(50%);
+    width: 50%;
+    margin: -4rem auto 0 auto;
+}
