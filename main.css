@@ -105,7 +105,6 @@ section h4 {
     font-size: 2.1rem;
     font-weight: 500;
     margin: 2rem;
-    padding-top: 2rem;
 }
 
 .defaultBT, summary {
@@ -117,6 +116,7 @@ section h4 {
     margin: 0 auto;
     font-size: 1.3rem;
 } .defaultBT img, summary img {
+    transform: scale(1.1);
     height: 100%;
 }  .arrow {
     width: 0.6rem;
@@ -302,6 +302,16 @@ details:focus {
     justify-content: center;
 }
 
+#price_conversion {
+    text-align: center;
+    margin: 8rem 0 6rem 0;
+} #price_conversion p {
+    font-size: 2.6rem;
+    font-weight: 500;
+} #price_conversion span {
+    font-size: 3rem;
+    margin: 1rem 0;
+}
 
 .pancakeswap {
     background: var(--color-3);
@@ -315,13 +325,25 @@ details:focus {
     color: var(--color-2);
 }
 
+.instagram {
+    background: linear-gradient(130deg, #406ac7, #c838a9, #ff6040 80%, #fedb58);
+} .instagram p {
+    color: var(--color-2);
+}
+
+.twitter {
+    background: #1DA1F2;
+} .twitter p {
+    color: var(--color-2);
+}
+
 #social_section iframe {
     transform: scale(0.90);
     transform-origin: top;
 }
 
 .link_tree {
-    margin: 3rem 0 1rem 0;
+    margin: 2rem 0;
 } .link_tree a {
     margin: 0.8rem auto;
 }
@@ -368,4 +390,32 @@ details:focus {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+footer {
+    background: var(--color-3);
+    color: var(--color-2);
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+}
+
+#dogbg {
+    display: block;
+    width: 70%;
+    margin: 4rem 0 0 auto;
+}
+
+#parceria_section {
+
+} #parceria_section a {
+    width: 40%;
+    height: 7rem;
+    display: block;
+    background: #EEF;
+    margin: 0 0 2rem 0;
+} #parceria_section > div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 }
