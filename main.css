@@ -1,3 +1,36 @@
+@keyframes loading_img {
+    0% {
+        transform:scale(1);
+    } 100% {
+        transform:scale(0.9);
+    }
+}
+
+#loading_bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: radial-gradient(#007BC1 20%, #4BC6FF);
+    z-index: 999;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s 0.2s ease;
+    transform: translateY(0);
+} #loading_bg img {
+    width: 24vh;
+    animation: loading_img 0.7s ease infinite alternate;
+} #loading_bg p {
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    margin-top: 2rem;
+
+}
+
 body, html {
     margin:0;
 }
@@ -73,6 +106,7 @@ header {
     z-index: 1;
 } #intro > img {
     width: 80%;
+    max-width: 26rem;
     margin: 0 auto;
 } h1 {
     font-size: 3.4rem;
@@ -176,7 +210,7 @@ section h4 {
     font-weight: 600;
     letter-spacing: 1px;
     font-size: 4vw;
-    z-index: 999;
+    z-index: 100;
 }
 
 .filled {
@@ -186,7 +220,7 @@ section h4 {
 
 #proposta {
     text-align: center;
-    margin-bottom: 7rem;
+    margin-bottom: 8rem;
     padding-top: 9vh;
     margin-top: -9vh;
 } .highlight_txt {
@@ -292,7 +326,7 @@ details:focus {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-} #data_section span {
+} #data_section article span {
     font-size: 1.1rem;
     line-height: 1.3rem;
 } #data_section div {
@@ -302,15 +336,32 @@ details:focus {
     justify-content: center;
 }
 
-#price_conversion {
+.real_time {
+    border: 3px solid var(--color-4);
+    border-radius: 0 2rem 0 2rem;
+    padding: 1.4rem 0rem 0.6rem 2rem;
+    box-sizing: border-box;
+    position: relative;
+    box-sizing: border-box;
+    background: white;
+    margin: 0 0 2.5rem 0;
+} .real_time span {
+    position: absolute;
+    margin: 0 auto;
+    top: 0;
+    left: -0.6rem;
     text-align: center;
-    margin: 8rem 0 6rem 0;
-} #price_conversion p {
-    font-size: 2.6rem;
+    transform: translateY(-50%);
+    background: var(--color-4);
+    padding: 0.3rem 1.5rem;
+    border-radius: 10rem;
     font-weight: 500;
-} #price_conversion span {
-    font-size: 3rem;
-    margin: 1rem 0;
+    letter-spacing: 0.1rem;
+    font-size: 0.9rem;
+    color: var(--color-2);
+} .real_time p {
+    font-size: 1.7rem;
+    font-weight: 500;
 }
 
 .pancakeswap {
