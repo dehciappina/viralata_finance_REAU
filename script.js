@@ -5,6 +5,11 @@ document.onreadystatechange = function () {
     if (document.readyState == "interactive" || document.readyState == "complete") {
 
         loadingBg.style.transform = 'translateY(-100%)';
+        setTimeout(() => {
+            loadingBgImg.style.animation = 'none';
+        }, 400);
+
+
 
         const header = document.querySelector('header')
 

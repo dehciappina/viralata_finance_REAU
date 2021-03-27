@@ -337,31 +337,29 @@ details:focus {
 }
 
 .real_time {
-    border: 3px solid var(--color-4);
-    border-radius: 0 2rem 0 2rem;
-    padding: 1.4rem 0rem 0.6rem 2rem;
-    box-sizing: border-box;
+    border: 3px solid var(--color-6);
+    border-radius: 10rem;
+    padding: 0 0 0.4rem 0;
     position: relative;
     box-sizing: border-box;
     background: white;
     margin: 0 0 2.5rem 0;
-} .real_time span {
-    position: absolute;
-    margin: 0 auto;
-    top: 0;
-    left: -0.6rem;
     text-align: center;
+} .real_time span {
+    margin: 0 auto -2rem auto;
     transform: translateY(-50%);
     background: var(--color-4);
-    padding: 0.3rem 1.5rem;
+    padding: 0 0.9rem;
+    line-height: 1.5rem;
     border-radius: 10rem;
     font-weight: 500;
     letter-spacing: 0.1rem;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--color-2);
 } .real_time p {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: 500;
+    margin-top: 1.6rem;
 }
 
 .pancakeswap {
