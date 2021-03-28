@@ -36,9 +36,11 @@ document.onreadystatechange = function () {
                     exitWindow.style.opacity = 1;
                     exitWindow.style.visibility = 'visible';
 
-                    telegramWindow.style.opacity = 1;
-                    telegramWindow.style.visibility = 'visible';
-                    telegramWindow.style.transform = "translateY(-50%)";
+                    setTimeout(() => {
+                        telegramWindow.style.opacity = 1;
+                        telegramWindow.style.visibility = 'visible';
+                        telegramWindow.style.transform = "translateY(-50%)";
+                    }, 200);
                 }
             })
         }
@@ -52,8 +54,20 @@ document.onreadystatechange = function () {
 
             telegramWindow.style.opacity = 0;
             telegramWindow.style.visibility = 'hidden';
-            telegramWindow.style.transform = "translateY(-30%)";
+            telegramWindow.style.transform = "translateY(-40%)";
         })
+
+
+        const bullets = document.querySelectorAll('details')
+
+        if(window.matchMedia("(min-width:140vh)").matches) {
+
+            for(i=0;i < bullets.length; i++) {
+                bullets[i].setAttribute('open', 'true');
+            }
+    
+        }
+
 
 
 
