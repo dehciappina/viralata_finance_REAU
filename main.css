@@ -297,7 +297,8 @@ details:focus {
     padding: 3rem 2rem 0 2rem;
     display: flex;
     flex-flow: column;
-    background: linear-gradient(90deg, var(--color-4), var(--color-1));
+    /* background: linear-gradient(90deg, var(--color-4), var(--color-1)); */
+    background-color: var(--color-4);
     font-size: 1.8rem;
     text-align: center;
     color: white;
@@ -496,7 +497,9 @@ footer {
 
 
 .pattern01 {
-    background-image: url('assets/paw.svg');
+    background-image: url(assets/paw.svg);
+    background-size: 3%;
+    background-attachment: fixed;
 }
 
 
@@ -567,14 +570,30 @@ footer {
     }
 
     header {
-        width: 26rem;
-        height: 8rem;
+        width: 24.1rem;
+        height: 5rem;
         left: 0;
         right: 0;
         margin: 0 auto;
-        border-radius: 0 0 1rem 1rem;
+        border-radius: 0 0 2.5rem 2.5rem;    
         background: none;
         box-shadow: none;
+        align-items: flex-end;
+        background: var(--color-3);
+        padding-bottom: 0.6rem;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    } header::after, header::before {
+        content: url(assets/border-radius-inverted.svg);
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        top: 0;
+    } header::before {
+        left: 0;
+        transform: translateX(-98%);
+    } header::after {
+        right: 0;
+        transform: translateX(97%) scaleX(-1);
     }
 
     #intro {
@@ -584,6 +603,7 @@ footer {
         background-position: left;
         background-size: 50% 100%;
         background-repeat: no-repeat;
+        background-attachment: fixed;
     } #intro > img {
         width: 40vw;
         min-width: 43rem;
@@ -615,7 +635,7 @@ footer {
     } .highlight_txt {
         font-size: 2.5rem;
         max-width: 62vw;
-        margin: 0 auto 4rem auto;
+        margin: 0 auto 2rem auto;
         font-weight: 300;
         padding: 0;
     }
@@ -633,13 +653,10 @@ footer {
         transition:filter 0.3s ease;
     } .defaultBT:hover, summary:hover {
         filter:brightness(1.1);
-    } .telegrambt {
-        transition:transform 0.2s ease;
-    } .telegrambt:hover {
-        transform:scale(1.05);
     } header .telegrambt {
         box-shadow: 0 0.4rem 2rem -0.6rem var(--color-5);
         border: 0.5rem solid white;
+        margin: 0;
     } .defaultBT img, summary img {
         transform: scale(1);
     }
